@@ -22,7 +22,9 @@ public class TestPackageMsg {
         return jsScript;
     }
 
-    
+    String getFunctionName() {
+        
+    }
 
 
 }
