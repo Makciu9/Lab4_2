@@ -10,7 +10,7 @@ public StoreActor extends AbstractActor {
     private HashMap  <Integer, ArrayList<Test>> store = new HashMap<>();
 
     public Receive createReceiva() {
-        r
+
         }
 
         }
