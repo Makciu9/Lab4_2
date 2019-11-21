@@ -23,8 +23,10 @@ public class TestPackageMsg {
     }
 
     String getFunctionName() {
-        
+        return functionName;
     }
+
+    
 
 
 }
