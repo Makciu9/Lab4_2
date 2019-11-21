@@ -44,4 +44,9 @@ public class Server {
         return complete("Test started!");
     })))),
     }
+
+    private Server(final ActorSystem system) {
+        
+    }
+
 }
