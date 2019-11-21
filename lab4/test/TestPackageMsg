@@ -19,8 +19,10 @@ public class TestPackageMsg {
     }
 
     String getJsScript() {
-        
+        return jsScript;
     }
+
+    
 
 
 }
