@@ -9,6 +9,7 @@ public class TestPackageMsg {
     String functionName, ArrayList<Test> tests) {
         this.packageID = packageID;
         this.jsScript = jsScript;
+        this.functionName = functionName;
 
     }
 
