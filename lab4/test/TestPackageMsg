@@ -10,6 +10,7 @@ public class TestPackageMsg {
         this.packageID = packageID;
         this.jsScript = jsScript;
         this.functionName = functionName;
+        this.tests = tests;
 
     }
 
