@@ -47,6 +47,7 @@ public class Server {
 
     private Server(final ActorSystem system) {
         storeActor = system.actorOf(Props.create(StoreActor.class), "storeActor");
+        testPackageActor = system.actorOf(Props.create(TestPackageActor.class),
     }
 
 }
