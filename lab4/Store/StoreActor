@@ -3,13 +3,27 @@
 
 import java.util.ArrayList;
 import java.util.HashMap;
-
+public class Greeter extends AbstractActor {
+    public static enum Msg {
+        GREET, DONE;
+    }
+    @Override
+    public Receive createReceive() {
+        return receiveBuilder()
+                .matchEquals(Msg.GREET, m -> {
+                    System.out.println("Hello World!");
+                    sender().tell(Msg.DONE, self());
+                })
+                .build();
+    }
+}
 
 public StoreActor extends AbstractActor {
     //id test.res
     private HashMap  <Integer, ArrayList<Test>> store = new HashMap<>();
 
     public Receive createReceiva() {
+        return receiveBuilder().
 
         }
 
