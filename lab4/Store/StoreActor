@@ -19,6 +19,8 @@ public class StoreActor extends AbstractActor {
                     if (!store.containsKey(m.getPackageID)))
                        store.put(m.getPackageID(), m.getTests());
                     else
+                        ArrayList<Test> res = store.get(m.getPackageID)
+                        res.addAll(m.getTests());
                       System.out.println("receive message! "+m.toString());
                 })
                 .match(GetMessage.class, req -> sender().tell(
