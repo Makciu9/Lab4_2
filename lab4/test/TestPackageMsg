@@ -7,6 +7,7 @@ public class TestPackageMsg {
     private int packageID;
     private String jsScript;
     private String functionName;
+    private ArrayList<Test> tests;
 
     public class TestPackageMsg(int packageID, String jsScript,
     String functionName, ArrayList<Test> tests) {
