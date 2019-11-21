@@ -5,7 +5,7 @@
 
 public class TestPackageMsg {
 
-    public class TestPackageMsg(int ){
+    public class TestPackageMsg(int packageID, ){
 
     }
 
