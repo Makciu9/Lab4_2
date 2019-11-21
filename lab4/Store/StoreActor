@@ -11,6 +11,7 @@ import java.util.Map;
 
 public class StoreActor extends AbstractActor {
     private HashMap  <Integer, ArrayList<Test>> store = new HashMap<>();
+    //id res
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
