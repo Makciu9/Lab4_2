@@ -1,0 +1,11 @@
+
+
+public class TestActor extends AbstractActor {
+
+    public Receive createReceive() {
+        return ReceiveBuilder.create()
+                .match(TestM.class, m -> storeActor.tell(new StoreMessage(m.getPackageID()),
+                        self()))
+                .build();
+    }
+}
