@@ -5,7 +5,7 @@
 
 public class TestPackageMsg {
 
-    public class TestPackageMsg(int packageID, ){
+    public class TestPackageMsg(int packageID, String jsScript,){
 
     }
 
