@@ -18,13 +18,15 @@ public class StoreActor extends AbstractActor {
                 .match(StoreMessage.class, m -> {
                     if (!store.containsKey(m.getPackageID)))
                        store.put(m.getPackageID(), m.getTests());
-                    else
+                    else{
                         ArrayList<Test> res = store.get(m.getPackageID)
                         res.addAll(m.getTests());
-                      System.out.println("receive message! "+m.toString());
+                        store.replace(m.getPackageID(), res)
+                    }
+                    System.out.println("receive message! " + m.toString());
                 })
                 .match(GetMessage.class, req -> sender().tell(
-                        new StoreMessage(req.getKey(), store.get(req.getKey())), self())
+                        new StoreMessage(req.getPackageID(), store.get(req.getPackageID())), self())
                 ).build();
     }
 }
