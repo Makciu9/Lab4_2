@@ -4,6 +4,7 @@
 
 
 public class TestPackageMsg {
+    
     private int packageID;
     private String jsScript;
     private String functionName;
