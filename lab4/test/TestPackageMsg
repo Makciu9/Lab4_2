@@ -17,6 +17,10 @@ public class TestPackageMsg {
     int getPackageID() {
         return packageID;
     }
-    
+
+    String getJsScript() {
+        
+    }
+
 
 }
