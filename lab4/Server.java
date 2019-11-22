@@ -1,5 +1,6 @@
 
 package test;
+package Store;
 import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -17,11 +18,11 @@ import akka.pattern.PatternsCS;
 import akka.routing.RoundRobinPool;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
-import lab4.Store.GetMessage;
-import lab4.Store.StoreActor;
-import lab4.Test.TestActor;
-import lab4.Test.TestPackageActor;
-import lab4.Test.TestPackageMessage;
+import Store.GetMessage;
+import Store.StoreActor;
+import test.TestActor;
+import test.TestPackageActor;
+import test.TestPackageMessage;
 
 
 
