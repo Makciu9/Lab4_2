@@ -5,17 +5,22 @@ public class TestActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(TestM.class, m -> storeActor.tell(new StoreMessage(m.getPackageID(),
+                        ruTest(m.g)
 
                         self()))
                 .build();
     }
 
 
-    private ArrayList<Test>   runTest(String proga, String testName, ArrayList<Integer> params,  String functionName,   )
-    ScriptEngine engine =
-            new ScriptEngineManager().getEngineByName("nashorn");
-engine.eval(jscript);
-    Invocable invocable = (Invocable) engine;
-return invocable.invokeFunction(functionName, params).toString();
+    private ArrayList<Test>   runTest(String proga, String testName, ArrayList<Integer> params,  String functionName, String expectedResult ) {
+        ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+        engine.eval(proga);
+        Invocable invocable = (Invocable) engine;
+        String resTmp = invocable.invokeFunction(functionName, params.toArray).toString();
+        ArrayList<Test> res = new ArrayList<>();
+        Test test = new Test(testName, expectedResult, params, resTmp.equals(expectedResult));
+        res.add(test);
+        return res;
+    }
 
 }
