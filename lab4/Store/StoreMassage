@@ -7,6 +7,7 @@ public class StoreMessage {
     private ArrayList<Test> tests;
 
     public StoreMessage(int packageID, ArrayList<Test> tests) {
+        this.packageID = packageID;
         
     }
 
