@@ -5,7 +5,7 @@ public class TestMsg {
     private String functionName;
     private Test test;
 
-    TestMsg(String testName, String expectedResult, ArrayList<Integer> params){
+    TestMsg(int packageID, String expectedResult, ArrayList<Integer> params){
         this.packageID=packageID;
         this.jsScript=jsScript;
         this.functionName=functionName;
