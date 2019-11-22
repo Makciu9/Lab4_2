@@ -22,5 +22,8 @@ public class Test {
         return expectedResult;
     }
 
+    ArrayList<Integer> getParams() {
+        
+    }
 
 }
