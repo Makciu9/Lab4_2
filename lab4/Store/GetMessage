@@ -3,5 +3,7 @@
 public class GetMessage {
     private int packageID;
 
-    
+    public GetMessage(int id) {
+        
+    }
 }
