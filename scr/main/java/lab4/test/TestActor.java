@@ -10,6 +10,7 @@ import test.TestMsg;
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import java.util.ArrayList;
 
 public class TestActor extends AbstractActor {
@@ -24,11 +25,11 @@ public class TestActor extends AbstractActor {
     }
 
 
-    private ArrayList<Test>   runTest(String proga, String testName, ArrayList<Integer> params, String functionName, String expectedResult ) {
+    private ArrayList<Test>   runTest(String proga, String testName, ArrayList<Integer> params, String functionName, String expectedResult ) throws ScriptException, NoSuchMethodException {
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
         engine.eval(proga);
         Invocable invocable = (Invocable) engine;
-        String resTmp = invocable.invokeFunction(functionName, params.toArray).toString();
+        String resTmp = invocable.invokeFunction(functionName, params.toArray()).toString();
         ArrayList<Test> res = new ArrayList<>();
         Test test = new Test(testName, expectedResult, params, resTmp.equals(expectedResult));
         res.add(test);
