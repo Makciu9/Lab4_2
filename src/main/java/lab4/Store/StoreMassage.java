@@ -20,7 +20,7 @@ public class StoreMassage {
     }
     @Override
     public String toString() {
-        
+        return "packageID = " + packageID + " : " + tests;
     }
     public int getPackageID() {
         return packageID;
