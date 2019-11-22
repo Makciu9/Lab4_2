@@ -4,5 +4,7 @@
 public class Test {
 
     private String testName;
-    Test(String testName, )
+    private String expectedResult;
+
+    Test(String testName, String expectedResult, )
 }
