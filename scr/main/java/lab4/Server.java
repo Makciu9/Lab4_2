@@ -41,6 +41,7 @@ public class Server {
     private final String TEST_PACKAGE_ACTOR = "testPackageActor";
 
     private static final String SERVER = "localhost";
+    private static final int PORT = 8080;
 
 
 
@@ -69,7 +70,7 @@ public class Server {
                 .thenAccept(unbound -> system.terminate());
 
     }
-    private Route createRoute() {
+    private Route createRoute(ActorSystem system) {
         return route(
             get( () ->
             parameter("packageID", (packageID) ->
