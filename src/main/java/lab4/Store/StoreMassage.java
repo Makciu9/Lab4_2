@@ -1,8 +1,9 @@
 package Store;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import test.Test;
 import java.util.ArrayList;
-@JsonAutoDetect
+
 public class StoreMassage {
     public Integer getPackageID;
     private int packageID;
@@ -11,7 +12,7 @@ public class StoreMassage {
     private final String PACKAGE_ID = "packageID";
     private final String TESTS = "tests";
 
-    public StoreMassage(int packageID, ArrayList<Test> tests) {
+    public StoreMassage(@JsonProperty(PACKAGE_ID) int packageID, ArrayList<Test> tests) {
         this.packageID = packageID;
         this.tests = tests;
     }
