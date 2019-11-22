@@ -3,6 +3,7 @@ package test;
 import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 import test.Test;
+import test.TestMsg;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;

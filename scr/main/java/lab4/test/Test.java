@@ -1,6 +1,8 @@
 package test;
 
 
+import java.util.ArrayList;
+
 public class Test {
 
     private String testName;
@@ -12,7 +14,7 @@ public class Test {
         this.testName=testName;
         this.expectedResult=expectedResult;
         this.params=params;
-        this.result=false;
+        this.result=result;
     }
    public String getTestName() {
         return this.testName;

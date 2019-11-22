@@ -1,3 +1,5 @@
+package test;
+
 public class TestMsg {
 
     private int packageID;
@@ -16,7 +18,7 @@ public class TestMsg {
     }
 
     public String getJsScript() {
-        return getJsScript;
+        return jsScript;
     }
 
     public String getFunctionName() {
