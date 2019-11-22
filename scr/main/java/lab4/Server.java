@@ -35,7 +35,10 @@ public class Server {
     private final String STORE_ACTOR = "storeActor";
 
     private ActorRef testPerformerRouter;
+    private final String TEST_PERFORMER_ROUTER = "testPerformerRouter";
+
     
+
 
 
     public static void main(String[] args) throws IOException {
