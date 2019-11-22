@@ -18,12 +18,12 @@ public class StoreActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(StoreMassage.class, m -> {
-                    if (!store.containsKey(m.getPackageID)))
+                    if (!store.containsKey(m.getPackageID()))
                        store.put(m.getPackageID(), m.getTests());
                     else {
                         ArrayList<Test> res = store.get(m.getPackageID);
                         res.addAll(m.getTests());
-                        store.replace(m.getPackageID(), res)
+                        store.replace(m.getPackageID(), res);
                     }
                     System.out.println("receive message! " + m.toString());
                 })
