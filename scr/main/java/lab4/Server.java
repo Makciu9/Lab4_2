@@ -14,7 +14,7 @@ import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.server.Route;
 import static akka.http.javadsl.server.Directives.*;
 import java.util.concurrent.CompletionStage;
-import akka.pattern.PatternsCS;
+
 import akka.routing.RoundRobinPool;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
@@ -82,7 +82,7 @@ public class Server {
 
     private Server(final ActorSystem system) {
         storeActor = system.actorOf(Props.create(StoreActor.class), STORE_ACTOR);
-        testPackageActor = system.actorOf(Props.create(TestPackageActor.class), TEST_PACKAGE_ACTOR);
+        testPackageActor = system.actorOf(Props.create(test.testPackageActor.class), TEST_PACKAGE_ACTOR);
         testPerformerRouter =  system.actorOf(new RoundRobinPool(5).props(Props.create(TestActor.class)), TEST_PERFORMER_ROUTER);
     }
 

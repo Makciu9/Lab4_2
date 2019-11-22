@@ -19,7 +19,7 @@ public class TestPackageMsg {
     private String jsScript;
     @JsonProperty(FUNCTION_NAME)
     private String functionName;
-    @JsonProperty(TESTS )
+    @JsonProperty(TESTS)
     private ArrayList<Test> tests;
 
     public class TestPackageMsg (int packageID, String jsScript, String functionName, ArrayList<Test> tests) {
@@ -41,7 +41,7 @@ public class TestPackageMsg {
         return functionName;
     }
 
-    ArrayList<Test> getTests() {
+    public ArrayList<Test> getTests() {
         return tests;
     }
 

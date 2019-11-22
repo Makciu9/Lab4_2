@@ -1,5 +1,11 @@
+package test;
 
-
+import akka.actor.AbstractActor;
+import akka.actor.ActorSelection;
+import akka.japi.pf.ReceiveBuilder;
+import test.Test;
+import test.TestMsg;
+import test.TestPackageMsg;
 
 public class TestPackageActor extends AbstractActor {
     private ActorSelection testPerformerRouter = getContext().actorSelection("/user/testPerformerRouter");
