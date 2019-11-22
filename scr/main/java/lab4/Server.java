@@ -73,20 +73,17 @@ public class Server {
 
     private Route createRoute(ActorSystem system) {
         return route(
-            get( () ->
+            get(() ->
                     parameter("packageID", (packageID) ->
                     {
-        Future<Object> result = Patterns.ask(storeActor,
+                        CompletionStage<Object> result = PatternsCs.ask(storeActor,
                 new GetMessage(Integer.parseInt(packageID)), 5000);
-        return completeOKWithFuture(result, Jackson.marshaller());
-    }))),
-    path("test", () ->
-    route(
-            post(() ->
-    entity(Jackson.unmarshaller(TestPackageMsg.class), msg -> {
+                        return completeOKWithFuture(result, Jackson.marshaller());
+    })),
+                post(() -> entity(Jackson.unmarshaller(TestPackageMsg.class), msg -> {
         testPackageActor.tell(msg, ActorRef.noSender());
         return complete("Test started!");
-    })))),
+    })));
     }
 
     private Server(final ActorSystem system) {
