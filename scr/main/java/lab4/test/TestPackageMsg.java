@@ -2,7 +2,7 @@ package test;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import test.Test;
+
 
 import java.util.ArrayList;
 
