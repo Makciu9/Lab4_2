@@ -1,6 +1,8 @@
 
 package lab4;
 import akka.NotUsed;
+import akka.actor.ActorRef;
+
 import java.io.IOException;
 
 public class Server {
