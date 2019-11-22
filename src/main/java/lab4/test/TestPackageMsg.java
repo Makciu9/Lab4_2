@@ -1,6 +1,7 @@
 package test;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 
@@ -21,7 +22,9 @@ public class TestPackageMsg {
     @JsonProperty(TESTS)
     private ArrayList<Test> tests;
 
-    public  TestPackageMsg (int packageID, String jsScript, String functionName, ArrayList<Test> tests) {
+    @JsonCreator
+    public  TestPackageMsg (@JsonProperty(PACKAGE_ID) int packageID, @JsonProperty(JSSCRIPT) String jsScript,
+                            @JsonProperty(FUNCTION_NAME)  String functionName,@JsonProperty(TESTS) ArrayList<Test> tests) {
         this.packageID = packageID;
         this.jsScript = jsScript;
         this.functionName = functionName;
