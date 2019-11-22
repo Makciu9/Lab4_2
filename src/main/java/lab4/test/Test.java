@@ -22,6 +22,15 @@ public class Test {
     @JsonProperty(RESULT)
     private boolean result;
 
+    
+    public Test(String testName, String expectedResult, ArrayList<Integer> params, boolean result){
+        this.testName=testName;
+        this.expectedResult=expectedResult;
+        this.params=params;
+        this.result=result;
+    }
+
+
     public Test(String testName, String expectedResult, ArrayList<Integer> params, boolean result){
         this.testName=testName;
         this.expectedResult=expectedResult;
