@@ -23,7 +23,7 @@ public class Test {
     }
 
     ArrayList<Integer> getParams() {
-        
+        return params;
     }
 
 }
