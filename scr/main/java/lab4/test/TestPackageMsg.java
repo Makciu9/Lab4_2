@@ -10,7 +10,7 @@ public class TestPackageMsg {
     private final String FUNCTION_NAME = "functionName";
     private final String TESTS = "tests";
 
-    
+    @JsonProperty(PACKAGE_ID)
     private int packageID;
     private String jsScript;
     private String functionName;
@@ -18,7 +18,6 @@ public class TestPackageMsg {
 
     public class TestPackageMsg(int packageID, String jsScript,
     String functionName, ArrayList<Test> tests) {
-        @JsonProperty
         this.packageID = packageID;
         @JsonProperty
         this.jsScript = jsScript;
