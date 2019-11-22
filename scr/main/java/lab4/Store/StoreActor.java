@@ -20,7 +20,7 @@ public class StoreActor extends AbstractActor {
                 .match(StoreMassage.class, m -> {
                     if (!store.containsKey(m.getPackageID)))
                        store.put(m.getPackageID(), m.getTests());
-                    else{
+                    else {
                         ArrayList<Test> res = store.get(m.getPackageID);
                         res.addAll(m.getTests());
                         store.replace(m.getPackageID(), res)
