@@ -12,7 +12,7 @@ public class StoreMassage {
     private final String PACKAGE_ID = "packageID";
     private final String TESTS = "tests";
 
-    public StoreMassage(@JsonProperty(PACKAGE_ID) int packageID, ArrayList<Test> tests) {
+    public StoreMassage(@JsonProperty(PACKAGE_ID) int packageID, @JsonProperty(TESTS) ArrayList<Test> tests) {
         this.packageID = packageID;
         this.tests = tests;
     }
