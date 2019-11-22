@@ -34,6 +34,7 @@ public class Server {
     private ActorRef storeActor;
     private final String STORE_ACTOR = "storeActor";
 
+    private ActorRef testPerformerRouter;
     
 
 
