@@ -3,7 +3,7 @@
 
 public class TestPackageActor extends AbstractActor {
     public Receive createReceive() {
-        return 
+        return ReceiveBuilder.create()
 
     }
 
