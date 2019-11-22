@@ -1,6 +1,8 @@
 package test;
 
+import Store.StoreMassage;
 import akka.actor.AbstractActor;
+import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
 import test.Test;
 import test.TestMsg;
@@ -13,10 +15,11 @@ import java.util.ArrayList;
 public class TestActor extends AbstractActor {
 
     public Receive createReceive() {
+        ActorRef storeActor = null;
         return ReceiveBuilder.create()
-                .match(TestMsg.class, m -> storeActor.tell(new StoreMessage(m.getPackageID(),
-                        ruTest(m.getJsScript(), m.getTest().getTestName(), m.getTest().getParams(),
-                                m.getFunctionName(), m.msg.getTest().getExpectedResult())),self()))
+                .match(TestMsg.class, m -> storeActor.tell(new StoreMassage(m.getPackageID(),
+                        runTest(m.getJsScript(), m.getTest().getTestName(), m.getTest().getParams(),
+                                m.getFunctionName(), m.getTest().getExpectedResult())),self()))
                 .build();
     }
 

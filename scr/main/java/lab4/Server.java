@@ -1,5 +1,6 @@
 
-package lab4;
+import Store.GetMessage;
+import Store.StoreActor;
 import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -17,14 +18,8 @@ import akka.pattern.PatternsCS;
 import akka.routing.RoundRobinPool;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
-import lab4.Store.GetMessage;
-import lab4.Store.StoreActor;
-import lab4.test.TestActor;
-import lab4.test.TestPackageActor;
-import lab4.test.TestPackageMessage;
-
-
-
+import test.TestActor;
+import test.TestPackageMsg;
 
 
 import java.io.IOException;

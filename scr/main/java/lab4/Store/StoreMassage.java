@@ -1,12 +1,12 @@
+package Store;
+import test.Test;
+import java.util.ArrayList;
 
-
-
-
-public class StoreMessage {
+public class StoreMassage {
     private int packageID;
     private ArrayList<Test> tests;
 
-    public StoreMessage(int packageID, ArrayList<Test> tests) {
+    public StoreMassage(int packageID, ArrayList<Test> tests) {
         this.packageID = packageID;
         this.packageID = packageID;
     }

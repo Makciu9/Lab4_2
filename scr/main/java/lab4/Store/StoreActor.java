@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
+import test.Test;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,18 +17,18 @@ public class StoreActor extends AbstractActor {
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
-                .match(StoreMessage.class, m -> {
+                .match(StoreMassage.class, m -> {
                     if (!store.containsKey(m.getPackageID)))
                        store.put(m.getPackageID(), m.getTests());
                     else{
-                        ArrayList<Test> res = store.get(m.getPackageID)
+                        ArrayList<Test> res = store.get(m.getPackageID);
                         res.addAll(m.getTests());
                         store.replace(m.getPackageID(), res)
                     }
                     System.out.println("receive message! " + m.toString());
                 })
                 .match(GetMessage.class, req -> sender().tell(
-                        new StoreMessage(req.getPackageID(), store.get(req.getPackageID())), self())
+                        new StoreMassage(req.getPackageID(), store.get(req.getPackageID())), self())
                 ).build();
     }
 }
