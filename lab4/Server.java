@@ -13,6 +13,7 @@ import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.server.Route;
 import static akka.http.javadsl.server.Directives.*;
 import java.util.concurrent.CompletionStage;
+import akka.pattern.PatternsCS;
 
 
 import java.io.IOException;
