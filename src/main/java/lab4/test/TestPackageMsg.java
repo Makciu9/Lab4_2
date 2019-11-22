@@ -22,7 +22,7 @@ public class TestPackageMsg {
     @JsonProperty(TESTS)
     private ArrayList<Test> tests;
 
-    public class TestPackageMsg () {
+    public class TestPackageMsg (int packageID,) {
         this.packageID = packageID;
         this.jsScript = jsScript;
         this.functionName = functionName;
