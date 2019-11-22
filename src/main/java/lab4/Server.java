@@ -15,6 +15,7 @@ import akka.http.javadsl.server.Route;
 import static akka.http.javadsl.server.Directives.*;
 import java.util.concurrent.CompletionStage;
 
+import akka.pattern.PatternsCS;
 import akka.routing.RoundRobinPool;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
@@ -70,7 +71,7 @@ public class Server {
             get(() ->
                     parameter("packageID", (packageID) ->
                     {
-                        CompletionStage<Object> result = PatternsCs.ask(storeActor,
+                        CompletionStage<Object> result = PatternsCS.ask(storeActor,
                 new GetMessage(Integer.parseInt(packageID)), 5000);
                         return completeOKWithFuture(result, Jackson.marshaller());
     })),
