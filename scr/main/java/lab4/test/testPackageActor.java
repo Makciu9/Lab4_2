@@ -7,7 +7,7 @@ import test.Test;
 import test.TestMsg;
 import test.TestPackageMsg;
 
-public class TestPackageActor extends AbstractActor {
+class TestPackageActor extends AbstractActor {
     private ActorSelection testPerformerRouter = getContext().actorSelection("/user/testPerformerRouter");
     public Receive createReceive() {
         return ReceiveBuilder.create()
