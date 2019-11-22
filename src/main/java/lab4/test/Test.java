@@ -50,4 +50,6 @@ public class Test {
 
     @Override
     public String toString() {
+        return "testName = " + testName + " result = " + result;
+    }
 }
