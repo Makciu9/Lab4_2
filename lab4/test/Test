@@ -18,6 +18,9 @@ public class Test {
         return this.testName;
     }
 
-    
+    String getExpectedResult() {
+        
+    }
+
 
 }
