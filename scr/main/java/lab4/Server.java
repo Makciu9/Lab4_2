@@ -32,7 +32,10 @@ import java.io.IOException;
 
 public class Server {
     private ActorRef storeActor;
+    private final String STORE_ACTOR = "storeActor";
+
     
+
 
     public static void main(String[] args) throws IOException {
         //ActorSystem system = ActorSystem.create("test")
