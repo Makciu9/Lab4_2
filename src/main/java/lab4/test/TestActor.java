@@ -15,6 +15,7 @@ import javax.script.ScriptException;
 import java.util.ArrayList;
 
 public class TestActor extends AbstractActor {
+    private ActorSelection storeActor = getContext().actorSelection("/user/storeActor");
     public Receive createReceive() {
         ActorRef storeActor = null;
         return ReceiveBuilder.create()
