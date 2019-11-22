@@ -5,22 +5,26 @@ public class TestMsg {
     private String functionName;
     private Test test;
 
-    Test(String testName, String expectedResult, ArrayList<Integer> params){
+    TestMsg(String testName, String expectedResult, ArrayList<Integer> params){
         this.packageID=packageID;
         this.jsScript=jsScript;
         this.functionName=functionName;
         this.test=test;
     }
-    String packageID() {
+    public int getPackageID() {
         return packageID;
     }
 
-    String getExpectedResult() {
-        return expectedResult;
+    public String getJsScript() {
+        return getJsScript;
     }
 
-    ArrayList<Integer> getParams() {
-        return params;
+    public String getFunctionName() {
+        return functionName;
+    }
+
+    public Test getTest() {
+        return test;
     }
 
 }
