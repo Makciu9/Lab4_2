@@ -1,11 +1,11 @@
 
-
+lab4.Store.StoreMsg;
 public class TestActor extends AbstractActor {
 
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(TestM.class, m -> storeActor.tell(new StoreMessage(m.getPackageID(),
-                        ruTest(m.g)
+                        ruTest(m.get)
 
                         self()))
                 .build();
