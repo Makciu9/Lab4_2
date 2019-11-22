@@ -5,6 +5,13 @@ public class Test {
 
     private String testName;
     private String expectedResult;
+    private ArrayList<Integer> params;
 
-    Test(String testName, String expectedResult, )
+    Test(String testName, String expectedResult, ArrayList<Integer> params){
+        this.testName=testName;
+        this.expectedResult=expectedResult;
+        this.params=params;
+        this.testName=testName;
+
+    }
 }
