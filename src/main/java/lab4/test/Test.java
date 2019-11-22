@@ -1,8 +1,10 @@
 package test;
 
 
-import java.util.ArrayList;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
+import java.util.ArrayList;
+@JsonAutoDetect
 public class Test {
 
     private String testName;
