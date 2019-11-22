@@ -6,4 +6,6 @@ public class StoreMessage {
     private int packageID;
     private ArrayList<Test> tests;
 
+    public StoreMessage(
+
 }
