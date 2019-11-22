@@ -40,7 +40,9 @@ public class Server {
     private ActorRef testPackageActor;
     private final String TEST_PACKAGE_ACTOR = "testPackageActor";
 
-    
+    private static final String SERVER = "localhost";
+
+
 
 
 
