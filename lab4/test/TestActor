@@ -11,7 +11,7 @@ public class TestActor extends AbstractActor {
     }
 
 
-    private ArrayList<Test>   runTest(String proga, String testName, ArrayList<Integer> params,  )
+    private ArrayList<Test>   runTest(String proga, String testName, ArrayList<Integer> params,  String functionName,   )
     ScriptEngine engine =
             new ScriptEngineManager().getEngineByName("nashorn");
 engine.eval(jscript);
