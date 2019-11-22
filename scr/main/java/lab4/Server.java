@@ -31,7 +31,8 @@ import test.TestPackageMessage;
 import java.io.IOException;
 
 public class Server {
-
+    private ActorRef storeActor;
+    
 
     public static void main(String[] args) throws IOException {
         //ActorSystem system = ActorSystem.create("test")
