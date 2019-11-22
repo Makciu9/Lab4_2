@@ -16,8 +16,9 @@ public class Test {
     private String testName;
     @JsonProperty(EXPECTED_RESULT)
     private String expectedResult;
-    
+    @JsonProperty(PARAMS)
     private ArrayList<Integer> params;
+    
     private boolean result;
 
     public Test(String testName, String expectedResult, ArrayList<Integer> params, boolean result){
