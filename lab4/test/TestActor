@@ -5,7 +5,8 @@ public class TestActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(TestM.class, m -> storeActor.tell(new StoreMessage(m.getPackageID(),
-                        ruTest(m.getJsScript(), m.getTest().getTestName(), m.getTest().getParams(), )
+                        ruTest(m.getJsScript(), m.getTest().getTestName(), m.getTest().getParams(),
+                                m.)
 
                         self()))
                 .build();
