@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class Test {
     private final String TEST_NAME = "testName";
     private final String EXPECTED_RESULT = "expectedResult";
+    private final String PARAMS = "params";
 
     private String testName;
     private String expectedResult;
