@@ -1,0 +1,26 @@
+public class TestMsg {
+
+    private int packageID;
+    private String jsScript;
+    private String functionName;
+    private Test test;
+
+    Test(String testName, String expectedResult, ArrayList<Integer> params){
+        this.packageID=packageID;
+        this.jsScript=jsScript;
+        this.functionName=functionName;
+        this.test=test;
+    }
+    String packageID() {
+        return packageID;
+    }
+
+    String getExpectedResult() {
+        return expectedResult;
+    }
+
+    ArrayList<Integer> getParams() {
+        return params;
+    }
+
+}
