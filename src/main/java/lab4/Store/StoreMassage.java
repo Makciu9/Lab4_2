@@ -1,7 +1,8 @@
 package Store;
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import test.Test;
 import java.util.ArrayList;
-
+@JsonAutoDetect
 public class StoreMassage {
     public Integer getPackageID;
     private int packageID;
