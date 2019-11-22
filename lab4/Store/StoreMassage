@@ -3,5 +3,6 @@
 
 
 public class StoreMessage {
+    private int packageID;
     
 }
