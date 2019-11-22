@@ -12,7 +12,9 @@ public class TestPackageMsg {
 
     @JsonProperty(PACKAGE_ID)
     private int packageID;
+    @JsonProperty(JSSCRIPT)
     private String jsScript;
+    @JsonProperty(FUNCTION_NAME)
     private String functionName;
     private ArrayList<Test> tests;
 
