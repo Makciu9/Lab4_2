@@ -9,7 +9,7 @@ public class StoreMassage {
 
     public StoreMassage(int packageID, ArrayList<Test> tests) {
         this.packageID = packageID;
-        this.packageID = packageID;
+        this.tests = tests;
     }
 
     public int getPackageID() {
