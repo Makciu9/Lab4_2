@@ -48,7 +48,7 @@ public class Server {
     private Server(final ActorSystem system) {
         storeActor = system.actorOf(Props.create(StoreActor.class), "storeActor");
         testPackageActor = system.actorOf(Props.create(TestPackageActor.class), "testPackageActor");
-        testPerformerRouter = 
+        testPerformerRouter =  system.actorOf(new RoundRobinPool(5).props(Props.create(TestActor.class)), "testPerfomerRouter");
     }
 
 }
