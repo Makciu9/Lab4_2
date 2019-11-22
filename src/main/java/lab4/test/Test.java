@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
-@JsonAutoDetect
 public class Test {
     private final String TEST_NAME = "testName";
     private final String EXPECTED_RESULT = "expectedResult";
@@ -24,7 +23,12 @@ public class Test {
     private boolean result;
 
 
-
+    Test(String testName, String expectedResult, ArrayList<Integer> params, boolean result){
+        this.testName=testName;
+        this.expectedResult=expectedResult;
+        this.params=params;
+        this.result=result;
+    }
 
      Test(String testName, String expectedResult, ArrayList<Integer> params, boolean result){
         this.testName=testName;
