@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
-
+@JsonAutoDetect
 public class Test {
     private final String TEST_NAME = "testName";
     private final String EXPECTED_RESULT = "expectedResult";
