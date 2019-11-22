@@ -15,4 +15,7 @@ public class StoreMessage {
         return packageID;
     }
 
+    public ArrayList<Test> getTests() {
+        
+    }
 }
