@@ -4,6 +4,9 @@
 public class TestPackageActor extends AbstractActor {
     public Receive createReceive() {
         return ReceiveBuilder.create()
+                .match(TestPackageMsg.class, m -> {
+
+                })
 
     }
 
