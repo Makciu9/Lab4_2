@@ -1,5 +1,6 @@
 
-lab4.Store.StoreMsg;
+
+package lab4.Store.StoreMsg;
 public class TestActor extends AbstractActor {
 
     public Receive createReceive() {
