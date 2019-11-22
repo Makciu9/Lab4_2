@@ -2,12 +2,11 @@ package test;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-
 import java.util.ArrayList;
 
 
 public class TestPackageMsg {
+
     private final String PACKAGE_ID = "packageID";
     private final String JSSCRIPT = "jsScript";
     private final String FUNCTION_NAME = "functionName";
