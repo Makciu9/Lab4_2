@@ -11,6 +11,8 @@ public class StoreMessage {
         this.packageID = packageID;
     }
 
-    
+    public int getPackageID() {
+        
+    }
 
 }
