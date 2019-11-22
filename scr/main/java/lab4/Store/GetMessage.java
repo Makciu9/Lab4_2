@@ -1,4 +1,4 @@
-
+package Store;
 
 public class GetMessage {
     private int packageID;
