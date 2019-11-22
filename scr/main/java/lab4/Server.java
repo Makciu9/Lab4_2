@@ -37,6 +37,7 @@ public class Server {
     private ActorRef testPerformerRouter;
     private final String TEST_PERFORMER_ROUTER = "testPerformerRouter";
 
+    private ActorRef testPackageActor;
     
 
 
