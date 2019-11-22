@@ -5,7 +5,7 @@ public class TestMsg {
     private String functionName;
     private Test test;
 
-    TestMsg(int packageID, String jsScript, String functionName, ){
+    TestMsg(int packageID, String jsScript, String functionName, Test test){
         this.packageID=packageID;
         this.jsScript=jsScript;
         this.functionName=functionName;
