@@ -24,7 +24,7 @@ public class Test {
     private boolean result;
 
     @JsonCreator
-    public Test(String testName, String expectedResult, ArrayList<Integer> params, boolean result){
+    public Test(@JsonProperty(TEST_NAME) String testName, String expectedResult, ArrayList<Integer> params, boolean result){
         this.testName=testName;
         this.expectedResult=expectedResult;
         this.params=params;
