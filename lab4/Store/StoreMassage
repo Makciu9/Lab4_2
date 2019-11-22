@@ -12,7 +12,7 @@ public class StoreMessage {
     }
 
     public int getPackageID() {
-        
+        return packageID;
     }
 
 }
