@@ -6,7 +6,7 @@ public class TestPackageActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(TestPackageMsg.class, m -> {
                     for(Test test: m.getTests()) {
-
+                        testPerformerRouter.tell(new TestMsg(m.)
                     }
                 })
                 .build();
