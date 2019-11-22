@@ -2,6 +2,7 @@
 
 
 public class TestPackageActor extends AbstractActor {
+    private ActorSelection testPerformerRouter = getContext().actorSelection("/user/testPerformerRouter");
     public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(TestPackageMsg.class, m -> {
