@@ -8,6 +8,6 @@ public class GetMessage {
     }
 
     public int getPackageID() {
-        
+        return packageID;
     }
 }
