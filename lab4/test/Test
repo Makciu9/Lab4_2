@@ -15,7 +15,8 @@ public class Test {
         this.result=false;
     }
     String getTestName() {
-        
+        return this.testName;
     }
+    
 
 }
