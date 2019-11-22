@@ -13,9 +13,13 @@ public class TestPackageMsg {
 
     public class TestPackageMsg(int packageID, String jsScript,
     String functionName, ArrayList<Test> tests) {
+        @JsonProperty
         this.packageID = packageID;
+        @JsonProperty
         this.jsScript = jsScript;
+        @JsonProperty
         this.functionName = functionName;
+        @JsonProperty
         this.tests = tests;
 
     }
