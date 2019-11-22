@@ -16,18 +16,14 @@ public class TestPackageMsg {
     private String jsScript;
     @JsonProperty(FUNCTION_NAME)
     private String functionName;
+    @JsonProperty(TESTS )
     private ArrayList<Test> tests;
 
-    public class TestPackageMsg(int packageID, String jsScript,
-    String functionName, ArrayList<Test> tests) {
+    public class TestPackageMsg(int packageID, String jsScript, String functionName, ArrayList<Test> tests) {
         this.packageID = packageID;
-        @JsonProperty
         this.jsScript = jsScript;
-        @JsonProperty
         this.functionName = functionName;
-        @JsonProperty
         this.tests = tests;
-
     }
 
     int getPackageID() {
