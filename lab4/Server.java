@@ -1,5 +1,6 @@
 
 package lab4;
+
 import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
@@ -11,9 +12,6 @@ import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.server.Route;
-import static akka.http.javadsl.server.Directives.*;
-import java.util.concurrent.CompletionStage;
-import akka.pattern.PatternsCS;
 import akka.routing.RoundRobinPool;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
@@ -21,13 +19,11 @@ import lab4.Store.GetMessage;
 import lab4.Store.StoreActor;
 import lab4.Test.TestActor;
 import lab4.Test.TestPackageActor;
-import lab4.Test.TestPackageMessage;
-
-
-
-
 
 import java.io.IOException;
+import java.util.concurrent.CompletionStage;
+
+import static akka.http.javadsl.server.Directives.*;
 
 public class Server {
 
