@@ -2,6 +2,7 @@ package test;
 
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ public class Test {
     @JsonProperty(RESULT)
     private boolean result;
 
-    
+    @JsonCreator
     public Test(String testName, String expectedResult, ArrayList<Integer> params, boolean result){
         this.testName=testName;
         this.expectedResult=expectedResult;
