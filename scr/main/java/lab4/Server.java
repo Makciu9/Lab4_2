@@ -70,6 +70,7 @@ public class Server {
                 .thenAccept(unbound -> system.terminate());
 
     }
+    
     private Route createRoute(ActorSystem system) {
         return route(
             get( () ->
@@ -89,9 +90,9 @@ public class Server {
     }
 
     private Server(final ActorSystem system) {
-        storeActor = system.actorOf(Props.create(StoreActor.class), "storeActor");
-        testPackageActor = system.actorOf(Props.create(TestPackageActor.class), "testPackageActor");
-        testPerformerRouter =  system.actorOf(new RoundRobinPool(5).props(Props.create(TestActor.class)), "testPerfomerRouter");
+        storeActor = system.actorOf(Props.create(StoreActor.class), STORE_ACTOR);
+        testPackageActor = system.actorOf(Props.create(TestPackageActor.class), TEST_PACKAGE_ACTOR);
+        testPerformerRouter =  system.actorOf(new RoundRobinPool(5).props(Props.create(TestActor.class)), TEST_PERFORMER_ROUTER);
     }
 
 }
