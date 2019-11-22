@@ -13,13 +13,9 @@ public class TestPackageMsg {
     private final String FUNCTION_NAME = "functionName";
     private final String TESTS = "tests";
 
-    @JsonProperty(PACKAGE_ID)
     private int packageID;
-    @JsonProperty(JSSCRIPT)
     private String jsScript;
-    @JsonProperty(FUNCTION_NAME)
     private String functionName;
-    @JsonProperty(TESTS)
     private ArrayList<Test> tests;
 
     @JsonCreator
