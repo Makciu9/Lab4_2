@@ -19,7 +19,9 @@ public class StoreMassage {
         this.tests = tests;
     }
     @Override
-    
+    public String toString() {
+        
+    }
     public int getPackageID() {
         return packageID;
     }
