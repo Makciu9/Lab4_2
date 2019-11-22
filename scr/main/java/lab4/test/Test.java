@@ -1,4 +1,4 @@
-
+package test;
 
 
 public class Test {
@@ -8,7 +8,7 @@ public class Test {
     private ArrayList<Integer> params;
     private boolean result;
 
-    Test(String testName, String expectedResult, ArrayList<Integer> params){
+    public Test(String testName, String expectedResult, ArrayList<Integer> params){
         this.testName=testName;
         this.expectedResult=expectedResult;
         this.params=params;
