@@ -66,7 +66,7 @@ public class Server {
 
     }
 
-    private Route createRoute(ActorSystem system) {
+    private Route createRoute() {
         return route(
             get(() ->
                     parameter("packageID", (packageID) ->
