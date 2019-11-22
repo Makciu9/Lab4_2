@@ -8,6 +8,7 @@ public class StoreMassage {
     private ArrayList<Test> tests;
 
     private final String PACKAGE_ID = "packageID";
+    private final String TESTS = "tests";
 
     public StoreMassage(int packageID, ArrayList<Test> tests) {
         this.packageID = packageID;
