@@ -14,15 +14,15 @@ public class Test {
         this.params=params;
         this.result=false;
     }
-    String getTestName() {
+   public String getTestName() {
         return this.testName;
     }
 
-    String getExpectedResult() {
+    public String getExpectedResult() {
         return expectedResult;
     }
 
-    ArrayList<Integer> getParams() {
+    public ArrayList<Integer> getParams() {
         return params;
     }
 
