@@ -15,6 +15,7 @@ import static akka.http.javadsl.server.Directives.*;
 import java.util.concurrent.CompletionStage;
 import akka.pattern.PatternsCS;
 import akka.routing.RoundRobinPool;
+import akka.stream.ActorMaterializer;
 
 
 import java.io.IOException;
